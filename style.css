@@ -1,53 +1,102 @@
-/* Estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
 }
+
 
 h1, h2 {
     color: #333;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
 }
+
 
 button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 12px 25px;
+    margin: 15px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
+
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-/* Estilos para la lista de nombres */
+
 #mostrarTexto {
     display: block;
     text-align: left;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     width: fit-content;
-    margin: 10px auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     white-space: pre-line;
+    font-size: 18px;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+    border: 2px solid #ddd;
 }
 
-/* Estilos para mostrar las parejas con diseño llamativo */
+
 #mostrarParejas {
     display: block;
     text-align: center;
     background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
     color: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     width: fit-content;
-    margin: 10px auto;
-    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+    margin: 20px auto;
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.6);
     font-weight: bold;
-    white-space: pre-line;
+    font-size: 18px;
+    border: 2px solid #ff1a1a;
 }
+
+
+h1 {
+    color: #4CAF50;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+pre {
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+body, h1, h2, button {
+    animation: fadeIn 0.8s ease-out;
+}
+
